@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<!-- Viewport Metatag -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!-- Plugin Stylesheets first to ease overrides -->
+<link rel="stylesheet" type="text/css" href="plugins/colorpicker/colorpicker.css" media="screen">
+<link rel="stylesheet" type="text/css" href="custom-plugins/wizard/wizard.css" media="screen">
+
+<!-- Required Stylesheets -->
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/fonts/ptsans/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/fonts/icomoon/style.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="css/mws-style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/icons/icol16.css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/icons/icol32.css" media="screen">
+
+<!-- Demo Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/demo.css" media="screen">
+
+<!-- jQuery-UI Stylesheet -->
+<link rel="stylesheet" type="text/css" href="jui/css/jquery.ui.all.css" media="screen">
+<link rel="stylesheet" type="text/css" href="jui/jquery-ui.custom.css" media="screen">
+
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/mws-theme.css" media="screen">
+<link rel="stylesheet" type="text/css" href="css/themer.css" media="screen">
+
+<title>GeNa Analytics DashBoard</title>
+</head>
+<body>
+  
+    <!-- Themer End -->
+
+	<!-- Header -->
+	<div id="mws-header" class="clearfix">
+    
+    	<!-- Logo Container -->
+    	<div id="mws-logo-container">
+        
+        	<!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+        	<div id="mws-logo-wrap">
+            	<img src="images/Gena_logo.png" alt="Gena Admin">       
+			</div>
+        </div>
+        
+        <!-- User Tools (notifications, logout, profile, change password) -->
+        <div id="mws-user-tools" class="clearfix">
+        
+        
+            
+            <!-- User Information and functions section -->
+            <div id="mws-user-info" class="mws-inset">
+            
+            	<!-- User Photo -->
+            	<div id="mws-user-photo">
+                	<img src="example/profile.jpg" alt="User Photo">
+                </div>
+                
+                <!-- Username and Functions -->
+                <div id="mws-user-functions">
+                    <div id="mws-username">
+                      <asp:Label ID="Label1" runat="server" Text="admin"></asp:Label>
+                    </div>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="/login.aspx?action=logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Start Main Wrapper -->
+    <div id="mws-wrapper">
+    
+    	<!-- Necessary markup, do not remove -->
+		<div id="mws-sidebar-stitch"></div>
+		<div id="mws-sidebar-bg"></div>
+        
+        <!-- Sidebar Wrapper -->
+        <div id="mws-sidebar">
+        
+            <!-- Hidden Nav Collapse Button -->
+            <div id="mws-nav-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+        	<!-- Searchbox -->
+        	 <!--  <div id="mws-searchbox" class="mws-inset">
+            	<form action="typography.html">
+                	<input type="text" class="mws-search-input" placeholder="Search...">
+                    <button type="submit" class="mws-search-submit"><i class="icon-search"></i></button>
+                </form>
+            </div>
+            -->
+            <!-- Main Navigation -->
+                      <div id="mws-navigation">
+                <ul>
+                    <li class="active"><a href="DashBoard.aspx"><i class="icon-home"></i> Dashboard</a></li>
+                    <li class="active"><a href="BoxScore.aspx"><i class="icon-home"></i> BoxScore</a></li>
+                    <li><a href="GameDataUpload.aspx"><i class="icon-th"></i> Game Data Upload</a></li>
+                <!--    <li><a href="charts.html"><i class="icon-graph"></i> Charts</a></li>
+                    <li><a href="calendar.html"><i class="icon-calendar"></i> Calendar</a></li>
+                    <li><a href="files.html"><i class="icon-folder-closed"></i> File Manager</a></li>
+                    <li><a href="table.html"><i class="icon-table"></i> Table</a></li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> Forms</a>
+                        <ul>
+                            <li><a href="form_layouts.html">Layouts</a></li>
+                            <li><a href="form_elements.html">Elements</a></li>
+                            <li><a href="form_wizard.html">Wizard</a></li>
+                        </ul>
+                    </li>-->
+                    <li><a href="DashBoardOffence.aspx"><i class="icon-cogs"></i> Team Offence </a></li>
+                    <li><a href="DashBoardDefence.aspx"><i class="icon-cogs"></i> Team Defence </a></li>
+                    <li><a href="PlayByPlay.aspx"><i class="icon-cogs"></i> Play by Play Match Data </a></li>
+                    <li><a href="DashBoardPlayerPerformance.aspx"><i class="icon-font"></i> Player Performance </a></li>
+                    <li><a href="Player.aspx"><i class="icon-pictures"></i> Player </a></li>
+                    <li><a href="fgmvsfga.aspx"><i class="icon-warning-sign"></i> Field Goal Analysis</a></li>
+
+                
+                </ul>
+            </div>         
+        </div>
+ 
+        <!-- Main Container Start -->
+        <div id="mws-container" class="clearfix">
+        
+        	<!-- Inner Container Start -->
+            <div class="container">
+            
+            	
+                <!-- Panels Start -->
+                
+            	<div class="mws-panel grid_8 mws-collapsible mws-collapsed">
+                	<div class="mws-panel-header">
+                    	<span><i class="icon-graph"></i> NBA Player Analysis</span>
+                    </div>
+                    <div class="mws-panel-body">
+                         <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                             </asp:ContentPlaceHolder>
+                       
+                    </div>
+                </div>
+                
+            	<div class="mws-panel grid_8 mws-collapsible mws-collapsed">
+                	<div class="mws-panel-header">
+                    	<span><i class="icon-book"></i> Three Point Dashboard</span>
+                    </div>
+                    <div class="mws-panel-body no-padding">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                             </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                
+           <div class="mws-panel grid_8 ">
+                	<div class="mws-panel-header">
+                    	<span><i class="icon-graph"></i> Game Details</span>
+                    </div>
+                    <div class="mws-panel-body">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                             </asp:ContentPlaceHolder>
+                       
+                    </div>
+                </div>
+                
+                <!-- Panels End -->
+            </div>
+            <!-- Inner Container End -->
+                       
+            <!-- Footer -->
+            <div id="mws-footer">
+                Developed by Subir Ranjan and Amit Mandal       
+
+            </div>
+            
+        </div>
+        <!-- Main Container End -->
+        
+    </div>
+
+    <!-- JavaScript Plugins -->
+    <script src="js/libs/jquery-1.8.3.min.js"></script>
+    <script src="js/libs/jquery.mousewheel.min.js"></script>
+    <script src="js/libs/jquery.placeholder.min.js"></script>
+    <script src="custom-plugins/fileinput.js"></script>
+    
+    <!-- jQuery-UI Dependent Scripts -->
+    <script src="jui/js/jquery-ui-1.9.2.min.js"></script>
+    <script src="jui/jquery-ui.custom.min.js"></script>
+    <script src="jui/js/jquery.ui.touch-punch.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/libs/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="plugins/flot/jquery.flot.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.tooltip.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.pie.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.stack.min.js"></script>
+    <script src="plugins/flot/plugins/jquery.flot.resize.min.js"></script>
+    <script src="plugins/colorpicker/colorpicker-min.js"></script>
+    <script src="plugins/validate/jquery.validate-min.js"></script>
+    <script src="custom-plugins/wizard/wizard.min.js"></script>
+
+    <!-- Core Script -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/core/mws.js"></script>
+
+    <!-- Themer Script (Remove if not needed) -->
+    <script src="js/core/themer.js"></script>
+
+    <!-- Demo Scripts (remove if not needed) -->
+    <script src="js/demo/demo.dashboard.js"></script>
+</body>
+</html>
